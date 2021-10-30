@@ -8,6 +8,7 @@ export default {}
 
 <style scoped>
 h1 {
+    margin-top: 6rem;
     color: red;
 }
 </style>

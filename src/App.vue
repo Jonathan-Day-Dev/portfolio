@@ -1,14 +1,14 @@
 <template>
   <TheNavbar />
-  <Home />
+  <TheBanner />
 </template>
 
 <script>
-import Home from "./components/Home.vue";
+import TheBanner from './components/banner/TheBanner.vue';
 export default {
   name: "App",
   components: {
-    Home
+    TheBanner
   },
 };
 </script>

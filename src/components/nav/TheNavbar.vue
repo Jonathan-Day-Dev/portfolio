@@ -27,6 +27,10 @@ export default {
           text: "Contact",
           href: "/contact",
         },
+        {
+          text: "Blog",
+          href: "/blog",
+        },
       ],
     };
   },
@@ -35,17 +39,25 @@ export default {
 
 <style scoped>
 nav {
-    background-color: skyblue;
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    justify-content: flex-end;
+  background-color: #555;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  justify-content: flex-end;
+  align-items: center;
 }
 li {
-    display: inline;
-    list-style: none;
-    margin: 0.5rem 1rem;
+  color: #eee;
+  display: inline;
+  list-style: none;
+  margin: 0.5rem 2rem;
+}
+li:hover {
+    cursor: pointer;
+    color: #ccc;
+    border: 1px solid black;
 }
 </style>
