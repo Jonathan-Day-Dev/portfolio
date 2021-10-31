@@ -4,6 +4,7 @@
           <p id="welcome_1">Welcome</p>
           <p id="welcome_name">Jonathan Day</p>
           <p id="welcome_desc">Web Developer and UI/UX Designer</p>
+          <p id="welcome_msg">Hello! My name is Jonathan and I have a passion for creating, designing and developing web applications with beautiful user experience and intuitive user interface</p>
       </section>
       <section id="photo">
           <img :src="imgPath" alt="me">
@@ -23,10 +24,7 @@ export default {
 
 <style scoped>
 header {
-    @apply flex justify-evenly h-1/2 w-10/12 mt-40 mx-auto mb-0;
-}
-section {
-    @apply w-1/2;
+    @apply flex justify-evenly h-80 w-10/12 mt-16 mx-auto mb-0;
 }
 img {
     @apply w-1/2 rounded-full;
@@ -50,5 +48,8 @@ p {
 }
 #welcome_desc {
     @apply text-xl;
+}
+#welcome_msg {
+    @apply text-gray-500 w-1/2 leading-relaxed;
 }
 </style>
