@@ -14,25 +14,12 @@ export default {
 
 <style scoped>
 nav {
-  background-color: #555;
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 5rem;
-  justify-content: flex-end;
-  align-items: center;
+  @apply bg-gray-600 flex fixed top-0 left-0 w-full h-20 justify-end items-center;
 }
 a {
-  color: #eee;
-  display: inline;
-  list-style: none;
-  margin: 0.5rem 2rem;
+  @apply text-gray-200 text-xl font-bold inline list-none mx-10 my-2 no-underline;
 }
 a:hover {
-    cursor: pointer;
-    color: #ccc;
-    border: 1px solid black;
+  @apply cursor-pointer text-gray-400;
 }
 </style>

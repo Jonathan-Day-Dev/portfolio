@@ -23,44 +23,32 @@ export default {
 
 <style scoped>
 header {
-    display: flex;
-    justify-content: space-evenly;
-    height: 50vh;
-    width: 90%;
-    margin: 10rem auto 0;
+    @apply flex justify-evenly h-1/2 w-10/12 mt-40 mx-auto mb-0;
 }
 section {
-    width: 50%;
+    @apply w-1/2;
 }
 img {
-    width: 50%;
-    border-radius: 50%;
+    @apply w-1/2 rounded-full;
 }
 p {
-    color: #eee;
+    @apply text-gray-300;
 }
 #welcome {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-left: 1rem;
+    @apply flex flex-col justify-evenly items-center ml-4;
 }
 #welcome_1,
 #welcome_name,
 #welcome_desc {
-    margin-bottom: 1rem;
+    @apply mb-4;
 }
-
 #welcome_1 {
-    font-size: 1rem;
-    text-transform: uppercase;
-    color: #c1c1c1;
+    @apply text-xl text-gray-500 uppercase;
 }
 #welcome_name {
-    font-size: 3rem;
+    @apply text-5xl;
 }
 #welcome_desc {
-    font-size: 1.5rem;
+    @apply text-xl;
 }
 </style>
