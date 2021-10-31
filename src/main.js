@@ -6,6 +6,7 @@ import Home from './components/Home.vue';
 import TheNavbar from './components/nav/TheNavbar.vue';
 import Contact from './components/contact/Contact.vue';
 import About from './components/about/About.vue';
+import Projects from './components/projects/Projects.vue';
 
 const app = createApp(App);
 
@@ -15,6 +16,10 @@ const router = createRouter({
         {
             path: '/',
             component: Home,
+        },
+        {
+            path: '/projects',
+            component: Projects,
         },
         {
             path: '/contact',
