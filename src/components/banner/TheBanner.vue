@@ -25,8 +25,9 @@ export default {
 header {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 7rem;
-    height: 100vh;
+    height: 50vh;
+    width: 90%;
+    margin: 10rem auto 0;
 }
 section {
     width: 50%;
@@ -38,8 +39,23 @@ img {
 p {
     color: #eee;
 }
+#welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 1rem;
+}
+#welcome_1,
+#welcome_name,
+#welcome_desc {
+    margin-bottom: 1rem;
+}
+
 #welcome_1 {
-    font-size: 2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #c1c1c1;
 }
 #welcome_name {
     font-size: 3rem;

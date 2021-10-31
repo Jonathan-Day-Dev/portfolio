@@ -1,39 +1,14 @@
 <template>
   <nav>
-    <ul>
-      <li v-for="item in items" :key="item.text">
-        <router-link :to="item.path">
-          {{ item.text }}
-        </router-link>
-      </li>
-    </ul>
+    <router-link to="/">Home</router-link>
+    <router-link to="/about">About Me</router-link>
+    <router-link to="/contact">Contact</router-link>
   </nav>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      items: [
-        {
-          text: "Home",
-          href: "/",
-        },
-        {
-          text: "About",
-          href: "/about",
-        },
-        {
-          text: "Contact",
-          href: "/contact",
-        },
-        {
-          text: "Blog",
-          href: "/blog",
-        },
-      ],
-    };
-  },
+  
 };
 </script>
 
@@ -49,13 +24,13 @@ nav {
   justify-content: flex-end;
   align-items: center;
 }
-li {
+a {
   color: #eee;
   display: inline;
   list-style: none;
   margin: 0.5rem 2rem;
 }
-li:hover {
+a:hover {
     cursor: pointer;
     color: #ccc;
     border: 1px solid black;
