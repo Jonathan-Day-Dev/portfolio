@@ -2,11 +2,14 @@ import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import App from './App.vue'
 
-import Home from './components/Home.vue';
 import TheNavbar from './components/nav/TheNavbar.vue';
+import TheBanner from './components/banner/TheBanner.vue';
+
+import Home from './components/Home.vue';
 import Contact from './components/contact/Contact.vue';
 import About from './components/about/About.vue';
 import Projects from './components/projects/Projects.vue';
+import Project from './components/projects/each/Project.vue';
 
 const app = createApp(App);
 
@@ -28,10 +31,15 @@ const router = createRouter({
         {
             path: '/about',
             component: About,
+        },
+        {
+            path: '/projects/:projectId',
+            component: Project
         }
     ],
 });
 
 app.use(router);
 app.component('TheNavbar', TheNavbar);
+app.component('TheBanner', TheBanner);
 app.mount('#app')

@@ -1,4 +1,5 @@
 <template>
+<TheBanner />
   <h1>Let's Talk!</h1>
   <form @submit.prevent>
     <div class="form-group">

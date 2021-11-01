@@ -1,13 +1,14 @@
 <template>
-    <h1>This is the About.vue file</h1>
+  <TheBanner />
+  <h1>This is the About.vue file</h1>
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style scoped>
 h1 {
-    @apply mt-28 text-red-600;
+  @apply mt-28 text-red-600;
 }
 </style>

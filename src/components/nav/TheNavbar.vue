@@ -23,7 +23,7 @@ img {
   @apply w-2/12 rounded ml-10 opacity-60;
 }
 a {
-  @apply text-gray-200 border-2 border-gray-200 border-solid text-xl font-bold inline list-none mx-10 my-2 px-2 py-3 no-underline rounded-lg;
+  @apply text-gray-200 border-2 border-gray-200 border-solid text-xl font-bold inline list-none mx-5 my-2 px-2 py-3 no-underline rounded-lg;
 }
 a:hover,
 a:active,
