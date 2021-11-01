@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <img src="img/logo.png" alt="logo" />
+    <img src="/img/logo.png" alt="logo" />
     <section id="links">
       <router-link to="/">Home</router-link>
       <router-link to="/projects">Projects</router-link>
