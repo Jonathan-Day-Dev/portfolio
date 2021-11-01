@@ -1,16 +1,32 @@
 <template>
   <TheBanner />
-  <h1>This is the Projects.vue file</h1>
+  <ul>
+    <ProjectBox 
+      v-for="project in projects" 
+      :key="project.id"
+      :id="project.id" 
+      :name="project.name" 
+      :techCount="project.tech.length"
+      style="border-bottom: 2px solid darkgray"
+    />
+  </ul>
 </template>
 
 <script>
+import ProjectBox from "./each/ProjectBox.vue";
 export default {
-  
+  components: {
+    ProjectBox
+  },
+  inject: ['projects', 'tech']
 };
 </script>
 
 <style scoped>
 h1 {
   @apply mt-28 text-red-600;
+}
+ul {
+  @apply list-none;
 }
 </style>

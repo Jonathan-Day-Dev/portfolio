@@ -1,24 +1,21 @@
 <template>
-  <ul>
-    <!-- <li v-for="projectTask in projectTasks" :key="projectTask.id">
-      <p>{{ projectTask.name || "Anything" }}</p>
-      <p>{{ projectTask.description || "something...." }}</p>
-    </li> -->
-    <TaskBox :name="projectTitle" :taskCount="projectTasks.length" />
-  </ul>
+  <TheNavbar />
+  <div>
+    <ProjectBox :name="projectTitle" :techCount="projectTech.length" :tech="projectTech"/>
+  </div>
 </template>
 
 <script>
-import TaskBox from './TaskBox.vue';
+import ProjectBox from "./ProjectBox.vue";
 export default {
-  inject: ["projects", "tasks"],
+  inject: ["projects", "tech"],
   components: {
-      TaskBox
+    ProjectBox,
   },
   data() {
     return {
       projectTitle: "",
-      projectTasks: [],
+      projectTech: [],
     };
   },
   created() {
@@ -27,13 +24,13 @@ export default {
       const selectedProject = this.projects.find(
         (project) => project.id === projectId
       );
-      const ptasks = selectedProject.tasks; 
-      const selectedTasks = [];
-      for (const ptask of ptasks) {
-        const foundTask = this.tasks.find((thistask) => thistask.id === ptask);
-        selectedTasks.push(foundTask);
+      const ptech = selectedProject.tech;
+      const selectedTech = [];
+      for (const pt of ptech) {
+        const foundTech = this.tech.find((thistech) => thistech.id === pt);
+        selectedTech.push(foundTech);
       }
-      this.projectTasks = selectedTasks;
+      this.projectTech = selectedTech;
       this.projectTitle = selectedProject.name;
     } catch (error) {
       console.log(error);
@@ -43,7 +40,7 @@ export default {
 </script>
 
 <style scoped>
-ul {
-    @apply mt-48;
+div {
+  @apply mt-36 list-none;
 }
 </style>
