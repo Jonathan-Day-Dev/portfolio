@@ -31,10 +31,10 @@ export default {
 
 <style scoped>
 header {
-  @apply flex justify-between h-52 w-5/6 mt-16 mx-auto mb-0;
+  @apply flex flex-col-reverse items-center md:items-stretch md:flex-row justify-evenly md:justify-between h-52 w-5/6 mt-56 sm:mt-24 md:mt-20 lg:mt-16 mx-auto mb-0;
 }
 img {
-  @apply h-full rounded-full border-2 border-gray-400 border-solid;
+  @apply h-48 md:h-full rounded-full border-2 border-gray-400 border-solid;
 }
 p {
   @apply text-gray-300;
@@ -44,7 +44,7 @@ section {
 }
 #welcome,
 #welcome div {
-  @apply flex justify-evenly items-center ml-8 w-3/4;
+  @apply flex flex-col md:flex-row justify-evenly items-center md:ml-8 w-3/4;
 }
 #welcome {
     @apply w-full;
