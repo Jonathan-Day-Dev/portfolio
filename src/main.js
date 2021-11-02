@@ -2,7 +2,8 @@ import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import App from './App.vue'
 
-import TheNavbar from './components/nav/TheNavbar.vue';
+//import TheNavbar from './components/nav/TheNavbar.vue';
+import Navbar from './components/UX/Navbar.vue'
 import TheBanner from './components/banner/TheBanner.vue';
 
 import Home from './components/Home.vue';
@@ -40,6 +41,6 @@ const router = createRouter({
 });
 
 app.use(router);
-app.component('TheNavbar', TheNavbar);
+app.component('Navbar', Navbar);
 app.component('TheBanner', TheBanner);
 app.mount('#app')

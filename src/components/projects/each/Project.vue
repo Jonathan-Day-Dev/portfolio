@@ -1,5 +1,4 @@
 <template>
-  <TheNavbar />
   <div>
     <ProjectBox :name="projectTitle" :techCount="projectTech.length" :tech="projectTech"/>
   </div>
@@ -41,6 +40,6 @@ export default {
 
 <style scoped>
 div {
-  @apply mt-36 list-none;
+  @apply list-none;
 }
 </style>

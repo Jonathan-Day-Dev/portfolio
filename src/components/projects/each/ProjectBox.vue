@@ -8,9 +8,7 @@
       </ul>
       <div id="btnGroup">
         <SubmitButton v-if="!this.$route.params.projectId"  :to="projectLink">View Project</SubmitButton>
-        <SubmitButton v-else to="/projects"
-          >Back To All Projects</SubmitButton
-        >
+        <SubmitButton v-else to="/projects">Back To All Projects</SubmitButton>
       </div>
     </section>
   </li>

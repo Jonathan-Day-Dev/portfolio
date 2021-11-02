@@ -1,5 +1,5 @@
 <template>
-  <TheNavbar />
+  <Navbar />
   <main>
     <router-view></router-view>
   </main>
@@ -15,7 +15,7 @@ export default {
           id: "project-1",
           name: "Project 1",
           description: "This is Project One",
-          tech: ["inertia", "vue"],
+          tech: ["inertia", "vue", "tailwind"],
         },
         {
           id: "project-2",
