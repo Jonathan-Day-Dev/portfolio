@@ -86,6 +86,9 @@ svg {
 .nav-link {
   @apply py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300;
 }
+.nav-link.router-link-active {
+  @apply text-green-500;
+}
 .img-link {
   @apply flex items-center py-4 px-2;
 }
@@ -119,9 +122,6 @@ svg {
 .mobile button {
   @apply outline-none;
 }
-/* .active-mobile-link {
-  @apply block text-sm px-2 py-4 text-white bg-green-500 font-semibold;
-} */
 .mobile-link {
   @apply block text-sm px-2 py-4 hover:bg-green-500 transition duration-300;
 }

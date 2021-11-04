@@ -1,6 +1,9 @@
 <template>
-<TheBanner />
-  <h1>Let's Talk!</h1>
+  <TheBanner />
+  <h1>Let's Talk Today</h1>
+  <section v-if="showError" class="error-box">
+    <FormError @closeError="closeErrorBox"/>
+  </section>
   <form @submit.prevent>
     <div class="form-group">
       <label for="name">Name</label>
@@ -8,7 +11,7 @@
         type="text"
         class="form-control"
         id="name"
-        v-model="name"
+        v-model="user.name"
         placeholder="Enter your name"
       />
     </div>
@@ -18,7 +21,7 @@
         type="email"
         class="form-control"
         id="email"
-        v-model="email"
+        v-model="user.email"
         placeholder="Enter your email"
       />
     </div>
@@ -27,8 +30,9 @@
       <textarea
         class="form-control"
         id="message"
-        v-model="message"
-        rows="3"
+        v-model="user.message"
+        rows="5"
+        cols="50"
         placeholder="Enter your message"
       ></textarea>
     </div>
@@ -39,14 +43,60 @@
 </template>
 
 <script>
-export default {};
+import FormError from "./FormError.vue";
+export default {
+  components: {
+    FormError,
+  },
+  data() {
+    return {
+      user: {
+        name: "",
+        email: "",
+        message: "",
+      },
+      showError: false,
+    };
+  },
+  methods: {
+    sendMessage() {
+      this.showError = false;
+      if (this.user.name && this.user.email && this.user.message) {
+        let username = this.user.name;
+        let email = this.user.email;
+        let message = this.user.message;
+        this.user.name = "";
+        this.user.email = "";
+        this.user.message = "";
+        console.log(username, email, message);
+      } else {
+        this.showError = true;
+      }
+    },
+    closeErrorBox() {
+      this.showError = false;
+    },
+  },
+};
 </script>
 
 <style scoped>
 h1 {
-  @apply mt-28 text-red-600;
+  @apply mt-28 text-red-600 underline mb-4;
 }
 form {
-  @apply w-screen overflow-x-hidden;
+  @apply w-screen overflow-x-hidden mb-10;
+}
+label {
+  @apply text-gray-300 mb-2;
+}
+input {
+  @apply w-96 py-2 pl-1;
+}
+.form-group {
+  @apply flex flex-col items-center justify-center mb-2 w-1/2 mx-auto;
+}
+.error-box {
+  @apply w-1/2 mx-auto mb-4 rounded-xl;
 }
 </style>

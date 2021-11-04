@@ -2,7 +2,6 @@ import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import App from './App.vue'
 
-//import TheNavbar from './components/nav/TheNavbar.vue';
 import Navbar from './components/UX/Navbar.vue'
 import TheBanner from './components/banner/TheBanner.vue';
 

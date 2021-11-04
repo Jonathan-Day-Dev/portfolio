@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import SubmitButton from "../../utils/SubmitButton.vue";
+import SubmitButton from "../../UI/SubmitButton.vue";
 export default {
   props: ["id", "name", "techCount", "tech"],
   components: {
