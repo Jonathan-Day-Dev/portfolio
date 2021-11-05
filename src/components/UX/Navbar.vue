@@ -5,7 +5,7 @@
         <div class="bottom">
           <!-- Logo -->
           <div>
-            <router-link to="#" class="img-link">
+            <router-link to="/" class="img-link">
               <img src="img/logo.png" alt="Logo" class="image" />
             </router-link>
           </div>
@@ -84,7 +84,7 @@ svg {
   @apply w-6 h-6 text-gray-500;
 }
 .nav-link {
-  @apply py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300;
+  @apply py-4 px-2 text-xl no-underline text-gray-500 font-semibold hover:text-green-500 transition duration-300;
 }
 .nav-link.router-link-active {
   @apply text-green-500;
@@ -111,7 +111,7 @@ svg {
   @apply hidden md:flex items-center space-x-3;
 }
 .sec-link {
-  @apply py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300 no-underline;
+  @apply py-2 px-2 text-lg font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300 no-underline;
 }
 .mobile {
   @apply md:hidden flex items-center;
