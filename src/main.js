@@ -34,7 +34,8 @@ const router = createRouter({
         },
         {
             path: '/projects/:projectId',
-            component: Project
+            component: Project,
+            props: true
         }
     ],
 });

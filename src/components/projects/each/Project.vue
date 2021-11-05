@@ -1,6 +1,11 @@
 <template>
   <div>
-    <ProjectBox :name="projectTitle" :techCount="projectTech.length" :tech="projectTech"/>
+    <ProjectBox
+      :id="projectId"
+      :name="projectTitle"
+      :techCount="projectTech.length"
+      :tech="projectTech"
+    />
   </div>
 </template>
 
@@ -8,6 +13,7 @@
 import ProjectBox from "./ProjectBox.vue";
 export default {
   inject: ["projects", "tech"],
+  props: ["projectId"],
   components: {
     ProjectBox,
   },
@@ -19,9 +25,8 @@ export default {
   },
   created() {
     try {
-      const projectId = this.$route.params.projectId;
       const selectedProject = this.projects.find(
-        (project) => project.id === projectId
+        (project) => project.id === this.projectId
       );
       const ptech = selectedProject.tech;
       const selectedTech = [];

@@ -7,7 +7,7 @@
         <li v-for="t in tech" :key="t.id">{{ t.name }}</li>
       </ul>
       <div id="btnGroup">
-        <SubmitButton v-if="!this.$route.params.projectId"  :to="projectLink">View Project</SubmitButton>
+        <SubmitButton v-if="!this.$route.params.projectId" :to="projectLink">View Project</SubmitButton>
         <SubmitButton v-else to="/projects">Back To All Projects</SubmitButton>
       </div>
     </section>
