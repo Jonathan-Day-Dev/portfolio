@@ -4,14 +4,10 @@
     <ul>
       <li v-for="t in projectTech" :key="t.id">{{ capitalize(t) }}</li>
     </ul>
-    <div id="btnGroup">
-      <SubmitButton to="/projects">Close</SubmitButton>
-    </div>
   </section>
 </template>
 
 <script>
-import SubmitButton from "../../UI/SubmitButton.vue";
 export default {
   data() {
     return {
@@ -21,9 +17,6 @@ export default {
   },
   props: ["projectId"],
   inject: ["projects", "tech"],
-  components: {
-    SubmitButton,
-  },
   methods: {
     getData() {
       const selectedProject = this.projects.find((p) => p.id == this.projectId);

@@ -1,12 +1,11 @@
 <template>
   <li>
-    <section>
-      <h3>{{ name }}</h3>
-      <div>{{ techCount }} Tech</div>
-      <div id="btnGroup">
-        <SubmitButton :to="projectLink">View Project Details</SubmitButton>
-      </div>
-    </section>
+    <SubmitButton :to="projectLink">
+      <section>
+        <h3>{{ name }}</h3>
+        <div>{{ techCount }} Tech</div>
+      </section>
+    </SubmitButton>
   </li>
 </template>
 
@@ -26,7 +25,7 @@ export default {
     projectLink() {
       return {
         name: "projectDetails",
-        params: { projectId: this.id }
+        params: { projectId: this.id },
       };
     },
   },
@@ -36,6 +35,9 @@ export default {
 <style scoped>
 section {
   @apply flex flex-col justify-evenly items-center h-60 m-5 border-2 border-gray-400 border-solid rounded-lg;
+}
+section:hover {
+  @apply bg-gray-500 opacity-50 text-gray-800;
 }
 h3 {
   @apply text-red-600 text-6xl;
@@ -49,8 +51,5 @@ li {
 }
 ul {
   @apply list-none;
-}
-#btnGroup {
-  @apply flex justify-evenly items-center w-full;
 }
 </style>
