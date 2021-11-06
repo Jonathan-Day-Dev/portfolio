@@ -1,0 +1,7 @@
+Fix spacing in Projects on smaller screens. Text and List intersecting (Projects.vue)
+Can't change from one project to another without pressing back first (ProjectBox.vue)
+
+ToDo:
+ -> Style Project Boxes
+ -> Find better font
+ -> Color Scheme (Light and Dark)

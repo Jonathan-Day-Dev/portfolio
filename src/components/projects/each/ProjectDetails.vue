@@ -2,7 +2,7 @@
   <section>
     <h3>{{ name }} Details</h3>
     <ul>
-      <li v-for="t in projectTech" :key="t.id">{{ t }}</li>
+      <li v-for="t in projectTech" :key="t.id">{{ capitalize(t) }}</li>
     </ul>
     <div id="btnGroup">
       <SubmitButton to="/projects">Close</SubmitButton>
@@ -30,9 +30,11 @@ export default {
       this.name = selectedProject.name;
       for (let t of selectedProject.tech) {
         this.projectTech.push(t);
-        console.log(this.projectTech);
       }
     },
+    capitalize(word) {
+          return word[0].toUpperCase() + word.slice(1);
+      }
   },
   mounted() {
     this.getData();

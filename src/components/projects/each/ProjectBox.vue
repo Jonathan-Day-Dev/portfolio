@@ -27,14 +27,14 @@ export default {
 
 <style scoped>
 section {
-  @apply flex flex-col justify-evenly items-center w-3/4 h-60 mx-auto;
+  @apply flex flex-col justify-evenly items-center h-60 m-5 border-2 border-gray-400 border-solid rounded-lg;
 }
 h3 {
   @apply text-red-600 text-6xl;
 }
 div,
 li {
-  @apply text-gray-300;
+  @apply text-gray-300 w-full md:w-1/2;
 }
 li {
   @apply my-4;
