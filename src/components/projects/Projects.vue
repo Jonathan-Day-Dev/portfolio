@@ -1,5 +1,6 @@
 <template>
   <TheBanner />
+  <router-view></router-view>
   <ul>
     <ProjectBox 
       v-for="project in projects" 
@@ -18,7 +19,7 @@ export default {
   components: {
     ProjectBox
   },
-  inject: ['projects', 'tech']
+  inject: ['projects']
 };
 </script>
 

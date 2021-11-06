@@ -2,13 +2,9 @@
   <li>
     <section>
       <h3>{{ name }}</h3>
-      <div v-if="!this.$route.params.projectId">{{ techCount }} Tech</div>
-      <ul v-else>
-        <li v-for="t in tech" :key="t.id">{{ t.name }}</li>
-      </ul>
+      <div>{{ techCount }} Tech</div>
       <div id="btnGroup">
-        <SubmitButton v-if="!this.$route.params.projectId" :to="projectLink">View Project</SubmitButton>
-        <SubmitButton v-else to="/projects">Back To All Projects</SubmitButton>
+        <SubmitButton :to="projectLink">View Project Details</SubmitButton>
       </div>
     </section>
   </li>
@@ -23,7 +19,7 @@ export default {
   },
   computed: {
     projectLink() {
-      return "/projects/" + this.id;
+      return { name: 'projectDetails', params: { projectId: this.id } }
     }
   }
 };
