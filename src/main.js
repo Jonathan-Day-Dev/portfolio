@@ -56,6 +56,15 @@ const router = createRouter({
             redirect: '/'
         }
     ],
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition;
+        }
+        return {
+            left: 0,
+            top: 0
+        }
+    }
 });
 
 app.use(router);
