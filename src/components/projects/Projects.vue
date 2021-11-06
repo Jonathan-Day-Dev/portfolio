@@ -1,6 +1,6 @@
 <template>
   <TheBanner />
-  <router-view></router-view>
+  <router-view :key="$route.fullPath"></router-view>
   <ul>
     <ProjectBox
       v-for="project in projects"

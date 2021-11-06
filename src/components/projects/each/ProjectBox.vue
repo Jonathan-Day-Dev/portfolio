@@ -17,11 +17,19 @@ export default {
   components: {
     SubmitButton,
   },
+  // methods: {
+  //   refreshRoute() {
+  //     this.$router.go(0)
+  //   }
+  // },
   computed: {
     projectLink() {
-      return { name: 'projectDetails', params: { projectId: this.id } }
-    }
-  }
+      return {
+        name: "projectDetails",
+        params: { projectId: this.id }
+      };
+    },
+  },
 };
 </script>
 
