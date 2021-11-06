@@ -56,6 +56,7 @@ export default {
         message: "",
       },
       showError: false,
+      formChangesSaved: false
     };
   },
   methods: {
@@ -72,11 +73,20 @@ export default {
       } else {
         this.showError = true;
       }
+      this.formChangesSaved = true;
     },
     closeErrorBox() {
       this.showError = false;
     },
   },
+  beforeRouteLeave(to, from, next) {
+    if (this.formChangesSaved) {
+      next();
+    } else {
+      const leavePage = confirm("You have unsaved changes. Are you sure you want to leave?")
+      next(leavePage);
+    }
+  }
 };
 </script>
 

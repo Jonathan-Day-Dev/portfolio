@@ -1,6 +1,6 @@
-Fix spacing in Projects on smaller screens. Text and List intersecting (Projects.vue)
-
 ToDo:
  -> Style Project Boxes
  -> Find better font
  -> Color Scheme (Light and Dark)
+ -> Fix spacing in Projects on smaller screens. Text and List intersecting (Projects.vue)
+ -> Style new alert on Contact Page
