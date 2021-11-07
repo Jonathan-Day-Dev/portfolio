@@ -2,13 +2,16 @@
   <TheBanner />
   <router-view :key="$route.fullPath"></router-view>
   <ul>
-    <ProjectBox
+    <li
       v-for="project in projects"
       :key="project.id"
-      :id="project.id"
-      :name="project.name"
-      :techCount="project.tech.length"
-    />
+    >
+      <ProjectBox
+        :id="project.id"
+        :name="project.name"
+        :techCount="project.tech.length"
+      />
+    </li>
   </ul>
 </template>
 
@@ -18,7 +21,7 @@ export default {
   components: {
     ProjectBox,
   },
-  inject: ["projects"],
+  inject: ["projects"]
 };
 </script>
 
@@ -28,5 +31,8 @@ h1 {
 }
 ul {
   @apply list-none flex justify-evenly flex-wrap;
+}
+li {
+  @apply w-full md:w-1/2;
 }
 </style>

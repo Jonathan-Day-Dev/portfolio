@@ -4,3 +4,4 @@ ToDo:
  -> Color Scheme (Light and Dark)
  -> Fix spacing in Projects on smaller screens. Text and List intersecting (Projects.vue)
  -> Style new alert on Contact Page
+ -> Logo keeps breaking

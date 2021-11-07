@@ -1,12 +1,10 @@
 <template>
-  <li>
-    <SubmitButton :to="projectLink">
-      <section>
-        <h3>{{ name }}</h3>
-        <div>{{ techCount }} Tech</div>
-      </section>
-    </SubmitButton>
-  </li>
+  <SubmitButton :to="projectLink">
+    <section>
+      <h3>{{ name }}</h3>
+      <div>{{ techCount }} Tech</div>
+    </section>
+  </SubmitButton>
 </template>
 
 <script>
@@ -16,11 +14,16 @@ export default {
   components: {
     SubmitButton,
   },
-  // methods: {
-  //   refreshRoute() {
-  //     this.$router.go(0)
-  //   }
-  // },
+  data() {
+    return {
+      animateButton: false
+    }
+  },
+  methods: {
+    animateBtn() {
+      this.animateButton = true;
+    },
+  },
   computed: {
     projectLink() {
       return {
@@ -28,6 +31,9 @@ export default {
         params: { projectId: this.id },
       };
     },
+    highlightBlock() {
+      return this.highlight ? { animate: true } : { animate: false };
+    }
   },
 };
 </script>
@@ -37,7 +43,7 @@ section {
   @apply flex flex-col justify-evenly items-center h-60 m-5 border-2 border-gray-400 border-solid rounded-lg;
 }
 section:hover {
-  @apply bg-gray-500 opacity-50 text-gray-800;
+  @apply cursor-pointer border-gray-600;
 }
 h3 {
   @apply text-red-600 text-6xl;
