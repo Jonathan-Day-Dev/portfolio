@@ -1,9 +1,11 @@
 <template>
   <TheBanner />
   <h1>Let's Talk Today</h1>
-  <section v-if="showError" class="error-box">
-    <FormError @closeError="closeErrorBox"/>
-  </section>
+  <transition name="err">
+    <section v-if="showError" class="error-box">
+      <FormError @closeError="closeErrorBox" />
+    </section>
+  </transition>
   <form @submit.prevent>
     <div class="form-group">
       <label for="name">Name</label>
@@ -56,7 +58,7 @@ export default {
         message: "",
       },
       showError: false,
-      formChangesSaved: false
+      formChangesSaved: false,
     };
   },
   methods: {
@@ -83,10 +85,12 @@ export default {
     if (this.formChangesSaved) {
       next();
     } else {
-      const leavePage = confirm("You have unsaved changes. Are you sure you want to leave?")
+      const leavePage = confirm(
+        "You have unsaved changes. Are you sure you want to leave?"
+      );
       next(leavePage);
     }
-  }
+  },
 };
 </script>
 
@@ -106,7 +110,18 @@ input {
 .form-group {
   @apply flex flex-col items-center justify-center mb-2 w-1/2 mx-auto;
 }
-.error-box {
-  @apply w-1/2 mx-auto mb-4 rounded-xl;
+
+/***** Animation Transitions *****/
+.err-enter-from,
+.err-leave-to {
+  @apply opacity-0 bg-transparent;
+}
+.err-enter-active,
+.err-leave-active {
+  @apply transition-all duration-500 ease-out;
+}
+.err-enter-to,
+.err-leave-from {
+  @apply opacity-100 bg-gray-700;
 }
 </style>

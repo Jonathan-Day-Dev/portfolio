@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "twbuild": "postcss public/css/tailwind.css -o public/css/app.css"
+    "twbuild": "postcss src/assets/css/tailwind.css -o src/assets/css/app.css --watch"
   },
   "dependencies": {
     "autoprefixer": "^9.8.8",
